@@ -7,6 +7,24 @@ saveButtonEl.onclick=function(){
     localStorage.setItem("TodoItems",JSON.stringify(todoList));
 }
 
+function deletetodo(todoId){
+    let todoEl =document.getElementById(todoId);
+    todosContainerEl.removeChild(todoEl);
+
+    let todoIndex =todoList.findIndex(function(eachItem){
+        let eachItemId = "todo" + eachItem.uniqueNo;
+        if(eachItemId===todoId){
+            return true;
+        }else{
+            return flase;
+        }
+    })
+
+    todoList.splice(todoIndex,1);
+}
+
+
+
 
 
 let todoList = getTodosFromlocalStorage();
@@ -50,10 +68,14 @@ addButtonEL.onclick=function(){
 function createTodo(todo){
 
     let checkboxId = "checkbox"+todo.uniqueNo;
+    let todoId = "todo" + todo.uniqueNo;
+
     
     let todoContainer = document.createElement("li");
     todoContainer.classList.add("todoItem");
+    todoContainer.id=todoId;
     todosContainerEl.appendChild(todoContainer);
+
 
     let inputBox = document.createElement("input");
     inputBox.classList.add("inputEl");
@@ -77,7 +99,13 @@ function createTodo(todo){
 
      let deletebutton =document.createElement("i");
      deletebutton.classList.add("fa-solid","fa-trash-can","deleteButton");
+     deletebutton.onclick =function(){
+        deletetodo(todoId);
+
+
+     }
       deletebuttoncontainer.appendChild(deletebutton);
+
 
      
 
