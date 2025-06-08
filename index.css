@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  background: #fff;
+  padding:18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.todo-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.todo-input button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-input button:hover {
+  background-color: #0056b3;
+}
+
+.todoItem{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  border-radius:10px;
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.inputEl{
+  margin-right:10px;
+  height:18px;
+  width:18px;
+}
+.todosItemContainer{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  height: 38px;
+  width: 90%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding:18px;
+  margin-top:10px;
+}
+.labelEl{
+  margin-top:6px;
+}
+.deleteButton{
+  cursor: pointer;
+}
