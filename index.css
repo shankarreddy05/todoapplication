@@ -1,6 +1,7 @@
+/* Reset and body styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f7f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f4f7f9, #dce9f9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,20 +9,29 @@ body {
   margin: 0;
 }
 
+/* Main container */
 .todo-container {
-  background: #fff;
-  padding:18px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  transition: all 0.3s ease-in-out;
 }
 
+.todo-container:hover {
+  transform: scale(1.01);
+}
+
+/* Title */
 .todo-container h2 {
   margin-bottom: 20px;
   text-align: center;
   color: #333;
+  font-weight: 600;
 }
 
+/* Input area */
 .todo-input {
   display: flex;
   gap: 10px;
@@ -30,52 +40,87 @@ body {
 
 .todo-input input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
 }
 
 .todo-input button {
-  padding: 10px 15px;
+  padding: 12px 16px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .todo-input button:hover {
   background-color: #0056b3;
 }
 
-.todoItem{
-  display:flex;
-  flex-direction: row;
-  align-items:center;
-  border-radius:10px;
-  margin-top:8px;
-  margin-bottom:8px;
-}
-.inputEl{
-  margin-right:10px;
-  height:18px;
-  width:18px;
-}
-.todosItemContainer{
+/* Todo items */
+.todoItem {
   display: flex;
-  flex-direction: row;
-  align-items:center;
-  height: 38px;
-  width: 90%;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  padding:18px;
-  margin-top:10px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
-.labelEl{
-  margin-top:6px;
+
+.inputEl {
+  height: 18px;
+  width: 18px;
+  accent-color: #007bff;
 }
-.deleteButton{
+
+/* Container for label and delete */
+.todosItemContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: background 0.3s;
+}
+
+.todosItemContainer:hover {
+  background-color: #e6efff;
+}
+
+/* Task label */
+.labelEl {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Delete icon container */
+.deletebuttoncontainer {
+  display: flex;
+  align-items: center;
+}
+
+.deleteButton {
+  font-size: 18px;
+  color: #ff3b3b;
   cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.deleteButton:hover {
+  color: #d60000;
+  transform: scale(1.2);
+}
+
+/* Save button */
+#saveButton {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
 }
